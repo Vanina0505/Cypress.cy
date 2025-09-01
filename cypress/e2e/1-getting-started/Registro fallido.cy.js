@@ -6,7 +6,7 @@ describe('Negative Cases - Registro de Usuario', {testIsolation : false},() => {
 it.skip('Registro fallido Campo Nombre Vacio', () => {
      cy.visit(url)
      cy.contains('Nombres').should('exist')
-     cy.get('[data-cy="input-apellido"]').type('Coso')
+     cy.get('[data-cy="input-apellido"]').type('Cosa')
      cy.get('[data-cy="input-telefono"]').type('0123456789')
      cy.get('[data-cy="input-dni"]').type('10045678')
      cy.get('[data-cy="select-provincia"]').click().type('Entre Rios{enter}')
