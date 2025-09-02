@@ -3,7 +3,7 @@ describe('Negative Cases - Registro de Usuario', {testIsolation : false},() => {
   const url = 'https://ticketazo.com.ar/auth/registerUser';
 
   // Caso 1: Registro fallido por campos vacíos
-it.skip('Registro fallido Campo Nombre Vacio', () => {
+it('Registro fallido Campo Nombre Vacio', () => {
      cy.visit(url)
      cy.contains('Nombres').should('exist')
      cy.get('[data-cy="input-apellido"]').type('Cosa')
@@ -22,7 +22,7 @@ it.skip('Registro fallido Campo Nombre Vacio', () => {
      cy.get('[data-focus-within="true"] > .hidden').contains('Rellene este campo').and('be.visible') 
 
 }) 
-it.skip('Registro fallido Campo Apellido Vacio', () => {
+it('Registro fallido Campo Apellido Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
      cy.contains('Apellido').should('exist')
@@ -42,7 +42,7 @@ it.skip('Registro fallido Campo Apellido Vacio', () => {
 
 
 })
-it.skip('Registro fallido Campo Telefono Vacio', () => {
+it('Registro fallido Campo Telefono Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
      cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -61,7 +61,7 @@ it.skip('Registro fallido Campo Telefono Vacio', () => {
     cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 
 })
-it.skip('Registro fallido Campo dni Vacio', () => {
+it('Registro fallido Campo dni Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
      cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -79,7 +79,7 @@ it.skip('Registro fallido Campo dni Vacio', () => {
      cy.get('[data-cy="btn-registrarse"]').click()
     cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Provincia Vacio', () => {
+it('Registro fallido Campo Provincia Vacio', () => {
       cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
      cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -97,7 +97,7 @@ it.skip('Registro fallido Campo Provincia Vacio', () => {
      cy.get('[data-cy="btn-registrarse"]').click()
      cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Localidad Vacio', () => {
+it('Registro fallido Campo Localidad Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro') 
       cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -115,7 +115,7 @@ it.skip('Registro fallido Campo Localidad Vacio', () => {
      cy.get('[data-cy="btn-registrarse"]').click()
      cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Dia de Nacimiento Vacio', () => {
+it('Registro fallido Campo Dia de Nacimiento Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro') 
       cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -133,7 +133,7 @@ it.skip('Registro fallido Campo Dia de Nacimiento Vacio', () => {
      cy.get('[data-cy="btn-registrarse"]').click()
      cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Mes de Nacimiento vacio', () => {
+it('Registro fallido Campo Mes de Nacimiento vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro') 
      cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -151,7 +151,7 @@ it.skip('Registro fallido Campo Mes de Nacimiento vacio', () => {
      cy.get('[data-cy="btn-registrarse"]').click()
      cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Año de Nacimiento vacio', () => {
+it('Registro fallido Campo Año de Nacimiento vacio', () => {
      cy.visit(url)  
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
      cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -169,7 +169,7 @@ it.skip('Registro fallido Campo Año de Nacimiento vacio', () => {
      cy.get('[data-cy="btn-registrarse"]').click()
      cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Email Vacio', () => {
+it('Registro fallido Campo Email Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')   
      cy.get('[data-cy="input-apellido"]').type('Coso')      
@@ -187,7 +187,7 @@ it.skip('Registro fallido Campo Email Vacio', () => {
      cy.get('[data-cy="btn-registrarse"]').click()
      cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Confirmar Email Vacio', () => { 
+it('Registro fallido Campo Confirmar Email Vacio', () => { 
       cy.visit(url)   
       cy.get('[data-cy="input-nombres"]').type('juan Pedro')
       cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -205,7 +205,7 @@ it.skip('Registro fallido Campo Confirmar Email Vacio', () => {
       cy.get('[data-cy="btn-registrarse"]').click()
       cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Contraseña Vacio', () => {
+it('Registro fallido Campo Contraseña Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro') 
       cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -223,7 +223,7 @@ it.skip('Registro fallido Campo Contraseña Vacio', () => {
       cy.get('[data-cy="btn-registrarse"]').click()
       cy.get('[data-invalid="true"] > .hidden').contains('Rellene este campo').and('be.visible')
 })
-it.skip('Registro fallido Campo Repetir Contraseña Vacio', () => {
+it('Registro fallido Campo Repetir Contraseña Vacio', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
       cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -243,7 +243,7 @@ it.skip('Registro fallido Campo Repetir Contraseña Vacio', () => {
 })
 
   // Caso 2: Los correos electronicos no coinciden
-it.skip('Registro fallido por correos diferentes', () => {
+it('Registro fallido por correos diferentes', () => {
      cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
      cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -263,7 +263,7 @@ it.skip('Registro fallido por correos diferentes', () => {
 })
      
  // Caso 3: Teléfono inválido  
-it.skip('No permite registrarse con un teléfono inválido', () => {
+it('No permite registrarse con un teléfono inválido', () => {
     cy.visit(url)
     cy.get('[data-cy="input-telefono"]').type('abcde12345')
     cy.get('[data-cy="btn-registrarse"]').click()
@@ -271,7 +271,7 @@ it.skip('No permite registrarse con un teléfono inválido', () => {
   })
 
   // Caso 4: Contraseñas invalidas
-it.skip('Registro fallido por contraseñas invalidas', () => {
+it('Registro fallido por contraseñas invalidas', () => {
     cy.visit(url)
      cy.get('[data-cy="input-nombres"]').type('juan Pedro')
      cy.get('[data-cy="input-apellido"]').type('Coso')
@@ -292,7 +292,7 @@ it.skip('Registro fallido por contraseñas invalidas', () => {
 })
 
   // Caso 5: Email con formato inválido
- it.skip('Registro fallido con un email inválido', () => {
+ it('Registro fallido con un email inválido', () => {
     cy.visit(url)
     cy.get('[data-cy="input-email"]').type('algogm.com')
     cy.get('[data-cy="input-confirmar-email"]').type('algogm.com')
